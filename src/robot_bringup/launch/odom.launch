@@ -1,0 +1,5 @@
+<launch>
+  <!-- If you have wheel odom, launch its node here; otherwise comment and use lidar-odom or EKF later -->
+  <node pkg="your_odom_pkg" type="your_odom_node" name="odom_node" output="screen" respawn="true" />
+</launch>
+

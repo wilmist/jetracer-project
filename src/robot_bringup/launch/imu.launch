@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="your_imu_driver_pkg" type="your_imu_driver_node" name="imu_driver" output="screen">
+    <param name="frame_id" value="imu_link" />
+    <param name="publish_tf" value="false" />
+  </node>
+</launch>
+

@@ -1,0 +1,23 @@
+<launch>
+  <node pkg="robot_bringup" type="ackermann_pca9685.py" name="ackermann_pca9685" output="screen">
+    <param name="i2c_bus" value="1"/>
+    <param name="i2c_addr" value="0x40"/>
+
+    <param name="steer_channel" value="0"/>
+    <param name="throttle_channel" value="1"/>
+
+    <!-- TUNE THESE for your servo/ESC -->
+    <param name="steer_max_angle" value="0.5"/>        <!-- radians -->
+    <param name="steer_center_us" value="1500"/>
+    <param name="steer_left_us"   value="1900"/>
+    <param name="steer_right_us"  value="1100"/>
+
+    <param name="speed_max" value="2.0"/>              <!-- m/s at ~full forward -->
+    <param name="throttle_neutral_us" value="1500"/>
+    <param name="throttle_min_us"     value="1100"/>   <!-- reverse -->
+    <param name="throttle_max_us"     value="1900"/>   <!-- forward -->
+
+    <param name="deadman_timeout" value="0.5"/>
+  </node>
+</launch>
+

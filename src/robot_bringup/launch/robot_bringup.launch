@@ -1,0 +1,9 @@
+<launch>
+  <include file="$(find robot_bringup)/launch/lidar.launch"/>
+
+  <node pkg="tf" type="static_transform_publisher" name="laser_to_base"
+        args="0.18 0.0 0.12 0 0 0 base_link laser 100"/>
+
+  <include file="$(find robot_bringup)/launch/ackermann_io.launch"/>
+</launch>
+

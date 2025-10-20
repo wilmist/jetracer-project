@@ -1,0 +1,9 @@
+<launch>
+  <node pkg="rplidar_ros" type="rplidarNode" name="rplidar" output="screen">
+    <param name="serial_port" value="/dev/ttyACM1" />
+    <param name="serial_baudrate" value="115200" />  <!-- if this errors, try 256000 -->
+    <param name="frame_id" value="laser" />
+    <param name="angle_compensate" value="true" />
+  </node>
+</launch>
+
